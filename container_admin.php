@@ -21,6 +21,9 @@
                         <td><?php print $book['title']; ?></td>
                         <td><?php print $book['author']; ?></td>
                         <td><?php print date('Y', $book['publish_date']); ?></td>
+                        <td>
+                            <a class="btn btn-info" href="add_book.php?id=<?php print $book['id']; ?>">Modifier</a>
+                        </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
