@@ -20,7 +20,7 @@
                         <td><?php print $book['id']; ?></td>
                         <td><?php print $book['title']; ?></td>
                         <td><?php print $book['author']; ?></td>
-                        <td><?php print $book['publish_date']; ?></td>
+                        <td><?php print date('Y', $book['publish_date']); ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
