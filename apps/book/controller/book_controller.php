@@ -26,5 +26,7 @@
     $body = $book == FALSE ? NULL : $book['body'];
     $book_id = $book == FALSE ? NULL : $book['id'];
     $op = $book == FALSE ? 'create' : 'update';
+
+    include('manager/get_all_authors.php');
   }
 ?>

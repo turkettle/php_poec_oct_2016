@@ -4,7 +4,7 @@
 
 <div class="container main">
 
-    <form class="form-horizontal" action="save_book.php" method="POST">
+    <form class="form-horizontal" action="manager/save_book.php" method="POST">
 
         <div class="form-group">
             <label for="title" class="col-sm-2 control-label">Titre</label>
@@ -16,7 +16,11 @@
         <div class="form-group">
             <label for="author" class="col-sm-2 control-label">Auteur</label>
             <div class="col-sm-4">
-                <input type="text" name="author" value="<?php print $author; ?>" class="form-control" id="author" placeholder="Auteur">
+              <select name="author" class="form-control">
+                <?php foreach($authors as $author) : ?>
+                  <option value="<?php print $author['id']; ?>"><?php print $author['name']; ?></option>
+              <?php endforeach; ?>
+              </select>
             </div>
         </div>
 

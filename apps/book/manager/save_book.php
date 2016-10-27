@@ -6,11 +6,11 @@
     // vers la page du formulaire.
     if (empty($_POST['title'])) {
         // TODO: Message flash.
-        header('Location: add_book.php');
+        header('Location: ../add_book.php');
     }
 
     // On importe la connexion en BDD.
-    include('db.php');
+    include('../../../db.php');
 
     // On converti la date insérée dans le formulaire
     // en timestamp (nombre de secondes écoulées depuis
@@ -46,7 +46,7 @@
     }
 
     $query->bindValue(':title', $_POST['title']);
-    $query->bindValue(':author', $_POST['author']);
+    $query->bindValue(':author', (int) $_POST['author']);
     $query->bindValue(':publish_date', $date);
     $query->bindValue(':body', $_POST['body']);
 
@@ -61,5 +61,5 @@
     // On redirige l'utilisateur vers la page
     // du formulaire.
     // TODO: Message de succés d'insertion du livre.
-    header('Location: admin.php');
+    header('Location: ../admin.php?app=book');
 ?>
