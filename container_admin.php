@@ -11,7 +11,7 @@
                     <th>#</th>
                     <th>Titre</th>
                     <th>Auteur</th>
-                    <th>Date de publication</th>
+                    <th>Parution</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -24,7 +24,7 @@
                         <td><?php print date('Y', $book['publish_date']); ?></td>
                         <td>
                             <a class="btn btn-info" href="add_book.php?id=<?php print $book['id']; ?>">Modifier</a>
-                            <a class="btn btn-danger" href="delete_book.php?id=<?php print $book['id']; ?>">Supprimer</a>
+                            <a class="btn btn-danger" href="confirm_delete_book.php?id=<?php print $book['id']; ?>">Supprimer</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>

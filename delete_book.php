@@ -8,11 +8,6 @@
         DELETE FROM book
         WHERE id=:id
     ");
-    $query->bindValue(':id', $_GET['id']);
-    $result = $query->execute();
-
-    // On redirige l'utilisateur vers la page
-    // du formulaire.
-    // TODO: Message de succés d'insertion du livre.
-    header('Location: admin.php');
+    $query->bindValue(':id', $id);
+    $execute = $query->execute();
 ?>
