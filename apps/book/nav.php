@@ -7,9 +7,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="<?php print $path_from_app; ?>index.php">Home</a>
-        <a class="navbar-brand" href="apps/book/add_book.php?app=book&action=create">Créer un livre</a>
-        <a class="navbar-brand" href="apps/book/admin.php?app=book">Administration</a>
+        <a class="navbar-brand" href="../../index.php">Home</a>
+        <a class="navbar-brand" href="add_book.php?app=book&action=create">Créer un livre</a>
+        <a class="navbar-brand" href="admin.php?app=book">Administration</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
         <form class="navbar-form navbar-right" role="form">

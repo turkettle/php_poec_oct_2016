@@ -54,9 +54,9 @@
     $result = $query->execute();
 
     // Débuggage.
-    var_dump($query->errorInfo());
-    var_dump($query);
-    var_dump($result);
+    // var_dump($query->errorInfo());
+    // var_dump($query);
+    // var_dump($result);
 
     // On redirige l'utilisateur vers la page
     // du formulaire.

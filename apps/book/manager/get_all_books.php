@@ -1,7 +1,7 @@
-<?php    
+<?php
 
     // On importe la connexion en BDD.
-    include('db.php');
+    include('../../db.php');
 
     $query = $db->query('SELECT id, title, author, publish_date FROM book');
     $result = $query->execute();

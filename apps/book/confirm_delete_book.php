@@ -3,8 +3,8 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
-    
-    <?php include('head.php'); ?>
+
+    <?php include('../../head.php'); ?>
 
     <body>
         <!--[if lt IE 8]>
@@ -12,8 +12,8 @@
         <![endif]-->
 
     <?php include('nav.php'); ?>
-    <?php include('container_book_form.php'); ?>
-    
+    <?php include('container/container_confirm_delete_book.php'); ?>
+
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/main.js"></script>

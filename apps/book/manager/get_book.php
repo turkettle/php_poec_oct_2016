@@ -2,10 +2,10 @@
 
     // Si on a une valeur d'ID de livre, on fait
     // la requête.
-    if ($book_id != FALSE) {            
+    if ($book_id != FALSE) {
 
         // On importe la connexion en BDD.
-        include('db.php');
+        include('../../db.php');
 
         $query = $db->prepare('SELECT * FROM book WHERE id=:id');
         $query->bindValue(':id', $book_id);

@@ -1,7 +1,7 @@
 <?php
 
     // On importe la connexion en BDD.
-    include('db.php');
+    include('../../../db.php');
 
     // On supprime le livre de la BDD.
     $query = $db->prepare("
