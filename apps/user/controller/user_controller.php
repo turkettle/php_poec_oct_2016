@@ -1,6 +1,6 @@
 <?php
-
-    var_dump($_POST);
+    session_start();
+    // var_dump($_POST);
 
     if (!empty($_POST)) {
 
@@ -33,12 +33,22 @@
 
             if (user_exists($_POST['email'], $_POST['pwd'])) {
               // TODO: message de confirmation de login.
+              $_SESSION['user'] = [
+                'email' => $_POST['email'],
+                'pwd' => $_POST['pwd'],
+              ];
             }
             else {
               // TODO: message de mauvais ID.
             }
-            header('Location: ../../../index.php');
+            // header('Location: ../../../index.php');
+            header('Location: ../user_form.php?app=user');
             break;
+
+          case 'logout':
+              session_destroy();
+              header('Location: ../user_form.php?app=user');
+              break;
 
           default:
             break;

@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    $app = isset($_GET['app']) ? $_GET['app'] : 'book';
+    $api = 'apps/' . $app . '/' . $app . '.api.php';
+    if (file_exists($api)) {
+      include($api);
+    }
+
+ ?>
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
